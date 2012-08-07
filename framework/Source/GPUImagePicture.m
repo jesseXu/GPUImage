@@ -27,7 +27,12 @@
 
     CGSize pointSizeOfImage = [newImageSource size];
     CGFloat scaleOfImage = [newImageSource scale];
-    pixelSizeOfImage = CGSizeMake(scaleOfImage * pointSizeOfImage.width, scaleOfImage * pointSizeOfImage.height);
+
+    //modified . fix me
+    //    pixelSizeOfImage = CGSizeMake(scaleOfImage * pointSizeOfImage.width, scaleOfImage * pointSizeOfImage.height);
+    pixelSizeOfImage = CGSizeMake(scaleOfImage * pointSizeOfImage.height, scaleOfImage * pointSizeOfImage.width);
+
+    
     CGSize pixelSizeToUseForTexture = pixelSizeOfImage;
 
     BOOL shouldRedrawUsingCoreGraphics = YES;
